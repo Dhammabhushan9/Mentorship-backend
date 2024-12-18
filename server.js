@@ -14,7 +14,7 @@ dotenv.config();
 
 // Connect to the database
 connectDB();
-
+app.use(cors());
 // data input in data base
 /*
 // Create User, Profile, and Connection
@@ -64,7 +64,7 @@ const profileRoutes = require('./routes/profileRoutes');
 const matchRoutes = require('./routes/matchRoutes');
 
 const app = express();
-app.use(cors());
+
 app.use(express.json());
 
 app.use('/api/auth', authRoutes);
