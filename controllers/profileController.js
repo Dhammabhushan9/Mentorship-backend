@@ -2,10 +2,10 @@ const Profile = require('../models/Profile');
 
 exports.createProfile = async (req, res) => {
   const { skills, interests, bio } = req.body;
-
+  console.log(skills)
   try {
-    const profile = new Profile({ userId: req.user.id, skills, interests, bio });
-    await profile.save();
+    const profile =  await Profile.create({ userId: req.user.id, skills, interests, bio });
+  
     res.status(201).json(profile);
   } catch (err) {
     res.status(400).json({ error: 'Error creating profile' });

@@ -8,8 +8,8 @@ exports.registerUser = async (req, res) => {
 
   try {
     const hashedPassword = await bcrypt.hash(password, 10);
-    const newUser = new User({ username, email, password: hashedPassword, role });
-    await newUser.save();
+    const newUser = await User.create({ username, email, password: hashedPassword, role });
+ 
 
     res.status(201).json({ message: 'User registered successfully' });
   } catch (err) {
@@ -19,6 +19,8 @@ exports.registerUser = async (req, res) => {
 
 exports.loginUser = async (req, res) => {
   const { email, password } = req.body;
+
+  console.log(email)
 
   try {
     const user = await User.findOne({ email });
