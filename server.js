@@ -19,7 +19,7 @@ const matchRoutes = require('./routes/matchRoutes');
 const app = express();
 
 // Middleware for CORS
-app.use(cors());
+ 
 app.use(
     cors({
       origin: 'http://localhost:5173',
