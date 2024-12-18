@@ -1,4 +1,3 @@
-// Load environment variables
 const dotenv = require('dotenv');
 dotenv.config();
 
@@ -74,8 +73,5 @@ const createData = async () => {
 // createData();
 */
 
-// Set the port from environment variable or default to 5000
-const PORT = process.env.PORT || 5000;
-
-// Start the server
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+// Export the app for Vercel's serverless functions to handle
+module.exports = app;
