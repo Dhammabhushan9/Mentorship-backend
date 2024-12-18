@@ -20,7 +20,11 @@ const app = express();
 
 // Middleware for CORS
 app.use(cors());
-
+app.use(
+    cors({
+      origin: 'http://localhost:5173',
+    })
+  );
 // Middleware for parsing JSON bodies
 app.use(express.json());
 
