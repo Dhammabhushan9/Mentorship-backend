@@ -78,4 +78,5 @@ const createData = async () => {
 */
 
 // Export the app for Vercel's serverless functions to handle
+app.listen(3000,()=>{console.log("port is deoloy")})
 module.exports = app;
