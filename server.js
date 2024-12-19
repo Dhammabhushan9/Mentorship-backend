@@ -22,7 +22,7 @@ const app = express();
  
 app.use(
     cors({
-      origin: 'http://localhost:5173',
+      origin: 'https://mentorship-frontend-one.vercel.app',
     })
   );
 // Middleware for parsing JSON bodies
