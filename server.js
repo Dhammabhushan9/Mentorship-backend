@@ -22,7 +22,7 @@ const app = express();
  
 app.use(
     cors({
-      origin: 'https://mentorship-frontend-one.vercel.app',
+      origin: 'https://mentorship-frontend-amber.vercel.app',
     })
   );
 // Middleware for parsing JSON bodies
